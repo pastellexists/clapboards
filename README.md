@@ -22,6 +22,8 @@ I hope to keep the mod up-to-date, but I made the mod in a couple of days for my
 
 - More localizations.
 
+- Mod compat. Don't know what mods yet.
+
 ## Localizations
 
 The mod has localizations available for the following languages:
