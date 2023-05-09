@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "clapboards:clapboard"
+    },
+    {
+      "tag": "clapboards:clapboard"
+    },
+    {
+      "tag": "clapboards:clapboard"
+    },
+    {
+      "tag": "clapboards:clapboard"
+    },
+    {
+      "item": "minecraft:white_dye"
+    }
+  ],
+  "result": {
+    "item": "clapboards:painted_clapboard",
+    "count": 4
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "clapboards:blocks/mangrove_clapboard_top",
+    "up": "clapboards:blocks/mangrove_clapboard_top",
+    "north": "clapboards:blocks/mangrove_clapboard_side",
+    "east": "clapboards:blocks/mangrove_clapboard_side",
+    "south": "clapboards:blocks/mangrove_clapboard_side",
+    "west": "clapboards:blocks/mangrove_clapboard_side",
+    "particle": "clapboards:blocks/mangrove_clapboard_top"
+  }
+}

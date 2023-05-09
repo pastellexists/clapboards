@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "clapboards:blocks/acacia_clapboard_top",
+    "up": "clapboards:blocks/acacia_clapboard_top",
+    "north": "clapboards:blocks/acacia_clapboard_side",
+    "east": "clapboards:blocks/acacia_clapboard_side",
+    "south": "clapboards:blocks/acacia_clapboard_side",
+    "west": "clapboards:blocks/acacia_clapboard_side",
+    "particle": "clapboards:blocks/acacia_clapboard_top"
+  }
+}
