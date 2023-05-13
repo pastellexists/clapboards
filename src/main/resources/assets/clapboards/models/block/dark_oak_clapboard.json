@@ -1,12 +1,12 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "clapboards:blocks/dark_oak_clapboard_top",
-    "up": "clapboards:blocks/dark_oak_clapboard_top",
-    "north": "clapboards:blocks/dark_oak_clap_board_side",
-    "east": "clapboards:blocks/dark_oak_clap_board_side",
-    "south": "clapboards:blocks/dark_oak_clap_board_side",
-    "west": "clapboards:blocks/dark_oak_clap_board_side",
-    "particle": "clapboards:blocks/dark_oak_clapboard_top"
+    "down": "clapboards:block/dark_oak_clapboard_top",
+    "up": "clapboards:block/dark_oak_clapboard_top",
+    "north": "clapboards:block/dark_oak_clap_board_side",
+    "east": "clapboards:block/dark_oak_clap_board_side",
+    "south": "clapboards:block/dark_oak_clap_board_side",
+    "west": "clapboards:block/dark_oak_clap_board_side",
+    "particle": "clapboards:block/dark_oak_clapboard_top"
   }
 }

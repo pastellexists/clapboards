@@ -1,12 +1,12 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "clapboards:blocks/jungle_clapboard_top",
-    "up": "clapboards:blocks/jungle_clapboard_top",
-    "north": "clapboards:blocks/jungle_clapboard_side",
-    "east": "clapboards:blocks/jungle_clapboard_side",
-    "south": "clapboards:blocks/jungle_clapboard_side",
-    "west": "clapboards:blocks/jungle_clapboard_side",
-    "particle": "clapboards:blocks/jungle_clapboard_top"
+    "down": "clapboards:block/jungle_clapboard_top",
+    "up": "clapboards:block/jungle_clapboard_top",
+    "north": "clapboards:block/jungle_clapboard_side",
+    "east": "clapboards:block/jungle_clapboard_side",
+    "south": "clapboards:block/jungle_clapboard_side",
+    "west": "clapboards:block/jungle_clapboard_side",
+    "particle": "clapboards:block/jungle_clapboard_top"
   }
 }

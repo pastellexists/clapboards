@@ -1,12 +1,12 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "clapboards:blocks/crimson_clapboard_top",
-    "up": "clapboards:blocks/crimson_clapboard_top",
-    "north": "clapboards:blocks/crimson_clapboard_side",
-    "east": "clapboards:blocks/crimson_clapboard_side",
-    "south": "clapboards:blocks/crimson_clapboard_side",
-    "west": "clapboards:blocks/crimson_clapboard_side",
-    "particle": "clapboards:blocks/crimson_clapboard_top"
+    "down": "clapboards:block/crimson_clapboard_top",
+    "up": "clapboards:block/crimson_clapboard_top",
+    "north": "clapboards:block/crimson_clapboard_side",
+    "east": "clapboards:block/crimson_clapboard_side",
+    "south": "clapboards:block/crimson_clapboard_side",
+    "west": "clapboards:block/crimson_clapboard_side",
+    "particle": "clapboards:block/crimson_clapboard_top"
   }
 }
