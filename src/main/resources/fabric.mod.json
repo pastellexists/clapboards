@@ -1,7 +1,7 @@
 {
 	"schemaVersion": 1,
 	"id": "clapboards",
-	"version": "${version}",
+	"version": "${mod_version}",
 	"name": "Clapboards",
 	"description": "Adds a variety of wooden clapboards to the game.",
 	"authors": [
