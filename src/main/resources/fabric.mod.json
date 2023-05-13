@@ -9,6 +9,7 @@
 	],
 	"contact": {
 		"homepage": "https://modrinth.com/mod/clapboards",
+		"issues": "https://github.com/pastellexists/clapboards/issues",
 		"sources": "https://github.com/pastellexists/clapboards"
 	},
 	"license": "CC0-1.0",
@@ -26,9 +27,14 @@
 		"fabricloader": ">=0.14.19",
 		"minecraft": "~1.19.4",
 		"java": ">=17",
-		"fabric-api": "*"
+		"fabric-api": "*",
+		"continuity": "*"
 	},
 	"suggests": {
-		"continuity": "*"
+
+	},
+	"custom": {
+		"modmenu": {
+		}
 	}
 }

@@ -10,11 +10,11 @@
       "item": "minecraft:stick"
     },
     "1": {
-      "item": "minecraft:oak_planks"
+      "item": "minecraft:cherry_planks"
     }
   },
   "result": {
-    "item": "clapboards:oak_clapboard",
+    "item": "clapboards:cherry_clapboard",
     "count": 4
   }
 }
