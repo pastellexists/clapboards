@@ -28,7 +28,13 @@ bin/
 
 *.DS_Store
 
-# forge
+# fabric
 
 run/
-.mcreator
+
+# java
+
+hs_err_*.log
+replay_*.log
+*.hprof
+*.jfr
