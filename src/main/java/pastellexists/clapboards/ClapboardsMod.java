@@ -2,13 +2,17 @@ package pastellexists.clapboards;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.MapColor;
 import net.minecraft.block.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 
+import net.minecraft.item.ItemGroups;
+import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
@@ -16,17 +20,7 @@ import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import static net.minecraft.block.Blocks.OAK_PLANKS;
-import static net.minecraft.block.Blocks.SPRUCE_PLANKS;
-import static net.minecraft.block.Blocks.BIRCH_PLANKS;
-import static net.minecraft.block.Blocks.JUNGLE_PLANKS;
-import static net.minecraft.block.Blocks.ACACIA_PLANKS;
-import static net.minecraft.block.Blocks.DARK_OAK_PLANKS;
-import static net.minecraft.block.Blocks.MANGROVE_PLANKS;
-import static net.minecraft.block.Blocks.CRIMSON_PLANKS;
-import static net.minecraft.block.Blocks.WARPED_PLANKS;
-import static net.minecraft.block.Blocks.CHERRY_PLANKS;
-import static net.minecraft.block.Blocks.BAMBOO_PLANKS;
+import static net.minecraft.block.Blocks.*;
 
 
 public class ClapboardsMod implements ModInitializer {
@@ -86,8 +80,39 @@ public class ClapboardsMod implements ModInitializer {
         Registry.register(Registries.ITEM, new Identifier(MODID, "mangrove_clapboard"), new BlockItem(MANGROVE_CLAPBOARD, new FabricItemSettings()));
         Registry.register(Registries.ITEM, new Identifier(MODID, "crimson_clapboard"),  new BlockItem(CRIMSON_CLAPBOARD, new FabricItemSettings()));
         Registry.register(Registries.ITEM, new Identifier(MODID, "warped_clapboard"),   new BlockItem(WARPED_CLAPBOARD, new FabricItemSettings()));
-
+        // The following two should not be available unless the 1.20 content experiment is enabled.
         Registry.register(Registries.ITEM, new Identifier(MODID, "cherry_clapboard"),   new BlockItem(CHERRY_CLAPBOARD, new FabricItemSettings()));
         Registry.register(Registries.ITEM, new Identifier(MODID, "bamboo_clapboard"),   new BlockItem(BAMBOO_CLAPBOARD, new FabricItemSettings()));
+
+        // Make overworld clapboards flammable
+        FlammableBlockRegistry.getDefaultInstance().add(PAINTED_CLAPBOARD, 5, 20);
+
+        FlammableBlockRegistry.getDefaultInstance().add(OAK_CLAPBOARD, 5, 20);
+        FlammableBlockRegistry.getDefaultInstance().add(SPRUCE_CLAPBOARD, 5, 20);
+        FlammableBlockRegistry.getDefaultInstance().add(BIRCH_CLAPBOARD, 5, 20);
+        FlammableBlockRegistry.getDefaultInstance().add(JUNGLE_CLAPBOARD, 5, 20);
+        FlammableBlockRegistry.getDefaultInstance().add(ACACIA_CLAPBOARD, 5, 20);
+        FlammableBlockRegistry.getDefaultInstance().add(DARK_OAK_CLAPBOARD, 5, 20);
+        FlammableBlockRegistry.getDefaultInstance().add(MANGROVE_CLAPBOARD, 5, 20);
+        // The following two should not be available unless the 1.20 content experiment is enabled.
+        FlammableBlockRegistry.getDefaultInstance().add(CHERRY_CLAPBOARD, 5, 20);
+        FlammableBlockRegistry.getDefaultInstance().add(BAMBOO_CLAPBOARD, 5, 20);
+        //Add to item groups
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {
+            content.add(PAINTED_CLAPBOARD);
+
+            content.add(OAK_CLAPBOARD);
+            content.add(SPRUCE_CLAPBOARD);
+            content.add(BIRCH_CLAPBOARD);
+            content.add(JUNGLE_CLAPBOARD);
+            content.add(ACACIA_CLAPBOARD);
+            content.add(DARK_OAK_CLAPBOARD);
+            content.add(MANGROVE_CLAPBOARD);
+            content.add(CRIMSON_CLAPBOARD);
+            content.add(WARPED_CLAPBOARD);
+            // The following two should not be available unless the 1.20 content experiment is enabled.
+            content.add(CHERRY_CLAPBOARD);
+            content.add(BAMBOO_CLAPBOARD);
+        });
     }
 }

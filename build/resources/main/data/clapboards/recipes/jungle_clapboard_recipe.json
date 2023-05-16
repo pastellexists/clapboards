@@ -1,9 +1,9 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "012",
-    "345",
-    "678"
+    "010",
+    "010",
+    "010"
   ],
   "key": {
     "0": {
@@ -11,27 +11,6 @@
     },
     "1": {
       "item": "minecraft:jungle_planks"
-    },
-    "2": {
-      "item": "minecraft:stick"
-    },
-    "3": {
-      "item": "minecraft:stick"
-    },
-    "4": {
-      "item": "minecraft:jungle_planks"
-    },
-    "5": {
-      "item": "minecraft:stick"
-    },
-    "6": {
-      "item": "minecraft:stick"
-    },
-    "7": {
-      "item": "minecraft:jungle_planks"
-    },
-    "8": {
-      "item": "minecraft:stick"
     }
   },
   "result": {
