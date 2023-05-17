@@ -1,8 +1,8 @@
 {
 	"schemaVersion": 1,
 	"id": "clapboards",
-	"version": "1.1.0",
-	"name": "Clapboards",
+	"version": "1.2.0+1.19.2",
+	"name": "Pastell's Clapboards",
 	"description": "Adds a variety of wooden clapboards to the game.",
 	"authors": [
 		"pastellexists"

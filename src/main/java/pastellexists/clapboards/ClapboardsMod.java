@@ -4,6 +4,9 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
+import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
+import net.fabricmc.fabric.api.resource.ResourcePackActivationType;
+import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.block.Block;
 import net.minecraft.block.MapColor;
 import net.minecraft.block.Material;
@@ -24,7 +27,7 @@ public class ClapboardsMod implements ModInitializer {
     // This logger is used to write text to the console and the log file.
     // It is considered best practice to use your mod id as the logger's name.
     // That way, it's clear which mod wrote info, warnings, and errors.
-    public static final Logger LOGGER = LoggerFactory.getLogger("clapboards");
+    public static final Logger LOGGER = LoggerFactory.getLogger("Clapboards");
     public static final String MODID = "clapboards";
 
     public static final Block PAINTED_CLAPBOARD = new Block(FabricBlockSettings.of(Material.WOOD, MapColor.WHITE_GRAY).strength(2.0f, 3.0f).sounds(BlockSoundGroup.WOOD));
@@ -44,7 +47,11 @@ public class ClapboardsMod implements ModInitializer {
         // This code runs as soon as Minecraft is in a mod-load-ready state.
         // However, some things (like resources) may still be uninitialized.
         // Proceed with mild caution.
-        LOGGER.info("Initializing Clapboards");
+        LOGGER.info("Initializing");
+
+        FabricLoader.getInstance().getModContainer(MODID).ifPresent(container -> {
+            ResourceManagerHelper.registerBuiltinResourcePack(asId("programmer_clapboards"), container, ResourcePackActivationType.NORMAL);
+        });
         // Register blocks
         Registry.register(Registry.BLOCK, new Identifier(MODID, "painted_clapboard"),  PAINTED_CLAPBOARD);
 
@@ -81,5 +88,9 @@ public class ClapboardsMod implements ModInitializer {
         FlammableBlockRegistry.getDefaultInstance().add(ACACIA_CLAPBOARD, 5, 20);
         FlammableBlockRegistry.getDefaultInstance().add(DARK_OAK_CLAPBOARD, 5, 20);
         FlammableBlockRegistry.getDefaultInstance().add(MANGROVE_CLAPBOARD, 5, 20);
+    }
+
+    public static Identifier asId(String path) {
+        return new Identifier(MODID, path);
     }
 }
