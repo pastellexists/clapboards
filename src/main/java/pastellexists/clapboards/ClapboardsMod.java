@@ -10,7 +10,6 @@ import net.fabricmc.fabric.api.resource.ResourcePackActivationType;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.block.Block;
 import net.minecraft.block.MapColor;
-import net.minecraft.block.Material;
 import net.minecraft.item.BlockItem;
 
 import net.minecraft.item.ItemGroups;
@@ -31,7 +30,7 @@ public class ClapboardsMod implements ModInitializer {
     public static final Logger LOGGER = LoggerFactory.getLogger("Clapboards");
     public static final String MODID = "clapboards";
 
-    public static final Block PAINTED_CLAPBOARD = new Block(FabricBlockSettings.of(Material.WOOD, MapColor.WHITE_GRAY).strength(2.0f, 3.0f).sounds(BlockSoundGroup.WOOD));
+    public static final Block PAINTED_CLAPBOARD = new Block(FabricBlockSettings.create().strength(2.0f, 3.0f).sounds(BlockSoundGroup.WOOD));
 
     public static final Block OAK_CLAPBOARD = new Block(FabricBlockSettings.copyOf(OAK_PLANKS));
     public static final Block SPRUCE_CLAPBOARD = new Block(FabricBlockSettings.copyOf(SPRUCE_PLANKS));
@@ -42,7 +41,6 @@ public class ClapboardsMod implements ModInitializer {
     public static final Block MANGROVE_CLAPBOARD = new Block(FabricBlockSettings.copyOf(MANGROVE_PLANKS));
     public static final Block CRIMSON_CLAPBOARD = new Block(FabricBlockSettings.copyOf(CRIMSON_PLANKS));
     public static final Block WARPED_CLAPBOARD = new Block(FabricBlockSettings.copyOf(WARPED_PLANKS));
-    // The following two should not be available unless the 1.20 content experiment is enabled.
     public static final Block CHERRY_CLAPBOARD = new Block(FabricBlockSettings.copyOf(CHERRY_PLANKS));
     public static final Block BAMBOO_CLAPBOARD = new Block(FabricBlockSettings.copyOf(BAMBOO_PLANKS));
 
@@ -86,7 +84,6 @@ public class ClapboardsMod implements ModInitializer {
         Registry.register(Registries.ITEM, new Identifier(MODID, "mangrove_clapboard"), new BlockItem(MANGROVE_CLAPBOARD, new FabricItemSettings()));
         Registry.register(Registries.ITEM, new Identifier(MODID, "crimson_clapboard"),  new BlockItem(CRIMSON_CLAPBOARD, new FabricItemSettings()));
         Registry.register(Registries.ITEM, new Identifier(MODID, "warped_clapboard"),   new BlockItem(WARPED_CLAPBOARD, new FabricItemSettings()));
-        // The following two should not be available unless the 1.20 content experiment is enabled.
         Registry.register(Registries.ITEM, new Identifier(MODID, "cherry_clapboard"),   new BlockItem(CHERRY_CLAPBOARD, new FabricItemSettings()));
         Registry.register(Registries.ITEM, new Identifier(MODID, "bamboo_clapboard"),   new BlockItem(BAMBOO_CLAPBOARD, new FabricItemSettings()));
 
@@ -100,7 +97,6 @@ public class ClapboardsMod implements ModInitializer {
         FlammableBlockRegistry.getDefaultInstance().add(ACACIA_CLAPBOARD, 5, 20);
         FlammableBlockRegistry.getDefaultInstance().add(DARK_OAK_CLAPBOARD, 5, 20);
         FlammableBlockRegistry.getDefaultInstance().add(MANGROVE_CLAPBOARD, 5, 20);
-        // The following two should not be available unless the 1.20 content experiment is enabled.
         FlammableBlockRegistry.getDefaultInstance().add(CHERRY_CLAPBOARD, 5, 20);
         FlammableBlockRegistry.getDefaultInstance().add(BAMBOO_CLAPBOARD, 5, 20);
         //Add to item groups
@@ -116,7 +112,6 @@ public class ClapboardsMod implements ModInitializer {
             content.add(MANGROVE_CLAPBOARD);
             content.add(CRIMSON_CLAPBOARD);
             content.add(WARPED_CLAPBOARD);
-            // The following two should not be available unless the 1.20 content experiment is enabled.
             content.add(CHERRY_CLAPBOARD);
             content.add(BAMBOO_CLAPBOARD);
         });
