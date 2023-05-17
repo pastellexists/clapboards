@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "clapboards:block/warped_clapboard_top",
+    "up": "clapboards:block/warped_clapboard_top",
+    "north": "clapboards:block/warped_clapboard_side",
+    "east": "clapboards:block/warped_clapboard_side",
+    "south": "clapboards:block/warped_clapboard_side",
+    "west": "clapboards:block/warped_clapboard_side",
+    "particle": "clapboards:block/warped_clapboard_top"
+  }
+}

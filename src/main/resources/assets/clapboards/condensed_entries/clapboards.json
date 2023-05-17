@@ -1,0 +1,19 @@
+{
+  "building_blocks": {
+    "clapboards:clapboards": {
+      "base_item": "clapboards:painted_clapboard",
+      "items": [
+        "clapboards:painted_clapboard",
+        "clapboards:oak_clapboard",
+        "clapboards:spruce_clapboard",
+        "clapboards:birch_clapboard",
+        "clapboards:jungle_clapboard",
+        "clapboards:acacia_clapboard",
+        "clapboards:dark_oak_clapboard",
+        "clapboards:mangrove_clapboard",
+        "clapboards:crimson_clapboard",
+        "clapboards:warped_clapboard"
+      ]
+    }
+  }
+}

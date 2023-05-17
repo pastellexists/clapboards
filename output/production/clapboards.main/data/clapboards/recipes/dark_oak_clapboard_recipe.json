@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "010",
+    "010",
+    "010"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:stick"
+    },
+    "1": {
+      "item": "minecraft:dark_oak_planks"
+    }
+  },
+  "result": {
+    "item": "clapboards:dark_oak_clapboard",
+    "count": 4
+  }
+}

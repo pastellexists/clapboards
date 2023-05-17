@@ -2,7 +2,6 @@ package pastellexists.clapboards;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.minecraft.block.Block;
@@ -11,12 +10,10 @@ import net.minecraft.block.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 
-import net.minecraft.item.ItemGroups;
-import net.minecraft.item.Items;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
+import net.minecraft.item.ItemGroup;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.registry.Registry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -41,10 +38,6 @@ public class ClapboardsMod implements ModInitializer {
     public static final Block MANGROVE_CLAPBOARD = new Block(FabricBlockSettings.copyOf(MANGROVE_PLANKS));
     public static final Block CRIMSON_CLAPBOARD = new Block(FabricBlockSettings.copyOf(CRIMSON_PLANKS));
     public static final Block WARPED_CLAPBOARD = new Block(FabricBlockSettings.copyOf(WARPED_PLANKS));
-    // The following two should not be available unless the 1.20 content experiment is enabled.
-    public static final Block CHERRY_CLAPBOARD = new Block(FabricBlockSettings.copyOf(CHERRY_PLANKS));
-    public static final Block BAMBOO_CLAPBOARD = new Block(FabricBlockSettings.copyOf(BAMBOO_PLANKS));
-
 
     @Override
     public void onInitialize() {
@@ -53,36 +46,30 @@ public class ClapboardsMod implements ModInitializer {
         // Proceed with mild caution.
         LOGGER.info("Initializing Clapboards");
         // Register blocks
-        Registry.register(Registries.BLOCK, new Identifier(MODID, "painted_clapboard"),  PAINTED_CLAPBOARD);
+        Registry.register(Registry.BLOCK, new Identifier(MODID, "painted_clapboard"),  PAINTED_CLAPBOARD);
 
-        Registry.register(Registries.BLOCK, new Identifier(MODID, "oak_clapboard"),      OAK_CLAPBOARD);
-        Registry.register(Registries.BLOCK, new Identifier(MODID, "spruce_clapboard"),   SPRUCE_CLAPBOARD);
-        Registry.register(Registries.BLOCK, new Identifier(MODID, "birch_clapboard"),    BIRCH_CLAPBOARD);
-        Registry.register(Registries.BLOCK, new Identifier(MODID, "jungle_clapboard"),   JUNGLE_CLAPBOARD);
-        Registry.register(Registries.BLOCK, new Identifier(MODID, "acacia_clapboard"),   ACACIA_CLAPBOARD);
-        Registry.register(Registries.BLOCK, new Identifier(MODID, "dark_oak_clapboard"), DARK_OAK_CLAPBOARD);
-        Registry.register(Registries.BLOCK, new Identifier(MODID, "mangrove_clapboard"), MANGROVE_CLAPBOARD);
-        Registry.register(Registries.BLOCK, new Identifier(MODID, "crimson_clapboard"),  CRIMSON_CLAPBOARD);
-        Registry.register(Registries.BLOCK, new Identifier(MODID, "warped_clapboard"),   WARPED_CLAPBOARD);
-
-        Registry.register(Registries.BLOCK, new Identifier(MODID, "cherry_clapboard"),   CHERRY_CLAPBOARD);
-        Registry.register(Registries.BLOCK, new Identifier(MODID, "bamboo_clapboard"),   BAMBOO_CLAPBOARD);
+        Registry.register(Registry.BLOCK, new Identifier(MODID, "oak_clapboard"),      OAK_CLAPBOARD);
+        Registry.register(Registry.BLOCK, new Identifier(MODID, "spruce_clapboard"),   SPRUCE_CLAPBOARD);
+        Registry.register(Registry.BLOCK, new Identifier(MODID, "birch_clapboard"),    BIRCH_CLAPBOARD);
+        Registry.register(Registry.BLOCK, new Identifier(MODID, "jungle_clapboard"),   JUNGLE_CLAPBOARD);
+        Registry.register(Registry.BLOCK, new Identifier(MODID, "acacia_clapboard"),   ACACIA_CLAPBOARD);
+        Registry.register(Registry.BLOCK, new Identifier(MODID, "dark_oak_clapboard"), DARK_OAK_CLAPBOARD);
+        Registry.register(Registry.BLOCK, new Identifier(MODID, "mangrove_clapboard"), MANGROVE_CLAPBOARD);
+        Registry.register(Registry.BLOCK, new Identifier(MODID, "crimson_clapboard"),  CRIMSON_CLAPBOARD);
+        Registry.register(Registry.BLOCK, new Identifier(MODID, "warped_clapboard"),   WARPED_CLAPBOARD);
 
         //Register block items
-        Registry.register(Registries.ITEM, new Identifier(MODID, "painted_clapboard"),  new BlockItem(PAINTED_CLAPBOARD, new FabricItemSettings()));
+        Registry.register(Registry.ITEM, new Identifier(MODID, "painted_clapboard"),  new BlockItem(PAINTED_CLAPBOARD, new FabricItemSettings()));
 
-        Registry.register(Registries.ITEM, new Identifier(MODID, "oak_clapboard"),      new BlockItem(OAK_CLAPBOARD, new FabricItemSettings()));
-        Registry.register(Registries.ITEM, new Identifier(MODID, "spruce_clapboard"),   new BlockItem(SPRUCE_CLAPBOARD, new FabricItemSettings()));
-        Registry.register(Registries.ITEM, new Identifier(MODID, "birch_clapboard"),    new BlockItem(BIRCH_CLAPBOARD, new FabricItemSettings()));
-        Registry.register(Registries.ITEM, new Identifier(MODID, "jungle_clapboard"),   new BlockItem(JUNGLE_CLAPBOARD, new FabricItemSettings()));
-        Registry.register(Registries.ITEM, new Identifier(MODID, "acacia_clapboard"),   new BlockItem(ACACIA_CLAPBOARD, new FabricItemSettings()));
-        Registry.register(Registries.ITEM, new Identifier(MODID, "dark_oak_clapboard"), new BlockItem(DARK_OAK_CLAPBOARD, new FabricItemSettings()));
-        Registry.register(Registries.ITEM, new Identifier(MODID, "mangrove_clapboard"), new BlockItem(MANGROVE_CLAPBOARD, new FabricItemSettings()));
-        Registry.register(Registries.ITEM, new Identifier(MODID, "crimson_clapboard"),  new BlockItem(CRIMSON_CLAPBOARD, new FabricItemSettings()));
-        Registry.register(Registries.ITEM, new Identifier(MODID, "warped_clapboard"),   new BlockItem(WARPED_CLAPBOARD, new FabricItemSettings()));
-        // The following two should not be available unless the 1.20 content experiment is enabled.
-        Registry.register(Registries.ITEM, new Identifier(MODID, "cherry_clapboard"),   new BlockItem(CHERRY_CLAPBOARD, new FabricItemSettings()));
-        Registry.register(Registries.ITEM, new Identifier(MODID, "bamboo_clapboard"),   new BlockItem(BAMBOO_CLAPBOARD, new FabricItemSettings()));
+        Registry.register(Registry.ITEM, new Identifier(MODID, "oak_clapboard"),      new BlockItem(OAK_CLAPBOARD, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
+        Registry.register(Registry.ITEM, new Identifier(MODID, "spruce_clapboard"),   new BlockItem(SPRUCE_CLAPBOARD, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
+        Registry.register(Registry.ITEM, new Identifier(MODID, "birch_clapboard"),    new BlockItem(BIRCH_CLAPBOARD, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
+        Registry.register(Registry.ITEM, new Identifier(MODID, "jungle_clapboard"),   new BlockItem(JUNGLE_CLAPBOARD, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
+        Registry.register(Registry.ITEM, new Identifier(MODID, "acacia_clapboard"),   new BlockItem(ACACIA_CLAPBOARD, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
+        Registry.register(Registry.ITEM, new Identifier(MODID, "dark_oak_clapboard"), new BlockItem(DARK_OAK_CLAPBOARD, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
+        Registry.register(Registry.ITEM, new Identifier(MODID, "mangrove_clapboard"), new BlockItem(MANGROVE_CLAPBOARD, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
+        Registry.register(Registry.ITEM, new Identifier(MODID, "crimson_clapboard"),  new BlockItem(CRIMSON_CLAPBOARD, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
+        Registry.register(Registry.ITEM, new Identifier(MODID, "warped_clapboard"),   new BlockItem(WARPED_CLAPBOARD, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
 
         // Make overworld clapboards flammable
         FlammableBlockRegistry.getDefaultInstance().add(PAINTED_CLAPBOARD, 5, 20);
@@ -94,25 +81,5 @@ public class ClapboardsMod implements ModInitializer {
         FlammableBlockRegistry.getDefaultInstance().add(ACACIA_CLAPBOARD, 5, 20);
         FlammableBlockRegistry.getDefaultInstance().add(DARK_OAK_CLAPBOARD, 5, 20);
         FlammableBlockRegistry.getDefaultInstance().add(MANGROVE_CLAPBOARD, 5, 20);
-        // The following two should not be available unless the 1.20 content experiment is enabled.
-        FlammableBlockRegistry.getDefaultInstance().add(CHERRY_CLAPBOARD, 5, 20);
-        FlammableBlockRegistry.getDefaultInstance().add(BAMBOO_CLAPBOARD, 5, 20);
-        //Add to item groups
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {
-            content.add(PAINTED_CLAPBOARD);
-
-            content.add(OAK_CLAPBOARD);
-            content.add(SPRUCE_CLAPBOARD);
-            content.add(BIRCH_CLAPBOARD);
-            content.add(JUNGLE_CLAPBOARD);
-            content.add(ACACIA_CLAPBOARD);
-            content.add(DARK_OAK_CLAPBOARD);
-            content.add(MANGROVE_CLAPBOARD);
-            content.add(CRIMSON_CLAPBOARD);
-            content.add(WARPED_CLAPBOARD);
-            // The following two should not be available unless the 1.20 content experiment is enabled.
-            content.add(CHERRY_CLAPBOARD);
-            content.add(BAMBOO_CLAPBOARD);
-        });
     }
 }
