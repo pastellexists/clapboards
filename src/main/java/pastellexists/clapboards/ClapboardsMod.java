@@ -9,7 +9,6 @@ import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
 import net.fabricmc.fabric.api.resource.ResourcePackActivationType;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.block.Block;
-import net.minecraft.block.MapColor;
 import net.minecraft.item.BlockItem;
 
 import net.minecraft.item.ItemGroups;
