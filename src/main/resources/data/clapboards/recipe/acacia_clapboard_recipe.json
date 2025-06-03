@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "/P/",
+    "/P/",
+    "/P/"
+  ],
+  "key": {
+    "/": "minecraft:stick",
+    "P": "minecraft:acacia_planks"
+  },
+  "result": {
+    "id": "clapboards:acacia_clapboard",
+    "count": 4
+  },
+  "group": "clapboards"
+}

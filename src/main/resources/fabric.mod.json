@@ -1,8 +1,7 @@
 {
 	"schemaVersion": 1,
 	"id": "clapboards",
-	"version": "1.2.0+1.20.1",
-
+	"version": "${version}",
 	"name": "Pastell's Clapboards",
 	"description": "Adds a variety of wooden clapboards to the game.",
 	"authors": [
@@ -18,23 +17,26 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"pastellexists.clapboards.ClapboardsMod"
+			"pastellexists.clapboards.Clapboards"
+		],
+		"client": [
+			"pastellexists.clapboards.ClapboardsClient"
 		]
 	},
 	"mixins": [
-		"clapboards.mixins.json"
+		"clapboards.mixins.json",
+		{
+			"config": "clapboards.client.mixins.json",
+			"environment": "client"
+		}
 	],
 	"depends": {
-		"fabricloader": ">=0.14.21",
-		"minecraft": "~1.20",
-		"java": ">=17",
+		"fabricloader": ">=0.16.14",
+		"minecraft": "~1.21.4",
+		"java": ">=21",
 		"fabric-api": "*"
 	},
 	"suggests": {
-		"condensed_creative": "~3.1.2+1.20"
-	},
-	"custom": {
-		"modmenu": {
-		}
+		"continuity": "3.0.0+1.21.4"
 	}
 }

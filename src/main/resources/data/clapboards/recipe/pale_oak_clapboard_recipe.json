@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "/P/",
+    "/P/",
+    "/P/"
+  ],
+  "key": {
+    "/": "minecraft:stick",
+    "P": "minecraft:pale_oak_planks"
+  },
+  "result": {
+    "id": "clapboards:pale_oak_clapboard",
+    "count": 4
+  },
+  "group": "clapboards"
+}
