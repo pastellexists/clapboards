@@ -1,18 +1,24 @@
-<img src="https://cdn-raw.modrinth.com/data/eLgDdBhb/images/55f92987b9144781aa28b40d20a76cbd053cd874.png" alt="Clapboards banner image">
+<img src="https://cdn.modrinth.com/data/eLgDdBhb/images/f1782b6a523b79672d1d37e6380cbf06c87cd7af.png" alt="Clapboards banner image">
 
 ---
 
 **Clapboards** is a client and server mod for the Fabric and Quilt mod loaders that adds several kinds of wooden clapboards. The mod comes with a bundled resourcepack with textures in line with Minecraft's pre-1.14/pre-Jappa textures, also known as Programmer Art.
 
+The mod does not strictly *require* [Continuity](https://modrinth.com/mod/continuity), but if you want the clapboards to connect together and look, you know, like clapboards, you'll want either it or an equivalent connected textures mod.
+
 ## Crafting
 
 ![A gif of the crafting recipe for clapboards](https://cdn-raw.modrinth.com/data/eLgDdBhb/images/b07a838bf91003fc4b82edce15addf3b16fab55c.gif)
-![A gif of the crafting recipe for Painted Clapboard](https://cdn-raw.modrinth.com/data/eLgDdBhb/images/3e8d20b4e157ee69e86868b1f96ff03e6c9796e6.gif)
 
 ## Mod Compat
 
 - **[Condensed Creative](https://modrinth.com/mod/condensed-creative)**  
 If Condensed Creative is present, all clapboard variants will be collapsed into a single group.
+
+## Known Issues
+
+- Versions for 1.21+ do not have a Russian localization from Pale Oak Wood. I don't know Russian, if anyone who does would be willing to provide one, put in a PR!
+- On 1.19.4, when installed alongside Condensed Creative, the creative menu will show Bamboo and Cherry clapboards even if 1.20 experimental features are not enabled for that world. As far as I can tell, this isn't something I can fix on my end, it's a case Condensed Creative just hasn't accounted for yet.
 
 ## Is that it?
 
@@ -25,13 +31,9 @@ I hope to keep the mod up-to-date, but I made the mod in a couple of days for my
 ## Future Plans
 *None of these are guarantees, just thoughts I have*
 
-- Update the mod to 1.20.
-
 - More localizations.
 
 - Mod compat. Don't know what mods yet. File a [GitHub issue](https://github.com/pastellexists/clapboards/issues) and let me know what compat you'd like to see, maybe?
-
-- Maybe, *maybe* add other Painted Clapboards in the various dye colors? I'm apprehensive because it's basically a slightly different version of Dyed Planks, a concept to which I am personally averse, but on the other hand, it seems weird to have a recipe using a dye that can't also use all the dyes.
 
 ## Localizations
 
