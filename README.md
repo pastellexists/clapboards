@@ -4,7 +4,7 @@
 
 **Clapboards** is a client and server mod for the Fabric and Quilt mod loaders that adds several kinds of wooden clapboards. The mod comes with a bundled resourcepack with textures in line with Minecraft's pre-1.14/pre-Jappa textures, also known as Programmer Art.
 
-The mod does not strictly *require* [Continuity](https://modrinth.com/mod/continuity), but if you want the clapboards to connect together and look, you know, like clapboards, you'll want either it or an equivalent connected textures mod.
+The mod does not strictly *require* [Continuity](https://modrinth.com/mod/continuity), but if you want the clapboards to connect together and look, you know, like clapboards, you'll need it.
 
 ## Crafting
 
